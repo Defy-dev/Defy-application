@@ -79,8 +79,8 @@ id: "builder",
 label: "AI Engineer",
 icon: " ",
 color: "#8b5cf6",
-bg: light,
-border: `rgba(139,92,246,0.3)`,
+bg: "#f5f3ff",
+border: "rgba(139,92,246,0.3)",
 salary: "$3,000–12,000/mo",
 desc: "Builds products using AI APIs. Integrates models into apps, writes prompts program
 day: ["9am — Reviews API logs", "10am — Writes Python to call GPT/Claude", "1pm — Ships a
@@ -4407,10 +4407,9 @@ onClick={()=>setTooltip(null)}>
 )}
 {/* ── HEADER ── */}
 <header style={{background:headerBg,borderBottom:`1px solid ${border}`,position:"stic
-<div style={{maxWidth:1100,margin:"0 auto",padding:"0 24px",height:60,display:"flex
-<div style={{cursor:"pointer",display:"flex",alignItems:"center",gap:10}} onClick
+<div style={{maxWidth:1100,margin:"0 auto",padding:"0 12px",height:60,display:"flex
+<div style={{cursor:"pointer",display:"flex",alignItems:"center",gap:6,flexShrink
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAA
-<span style={{fontSize:20,fontWeight:900,letterSpacing:2,color:textPrimary}}>DE
 </div>
 <nav style={{display:"flex",gap:2,flex:1}}>
 {!landingView&&[["tracks","Tracks"],["progress","Progress"],["achievements","Ac
@@ -4500,8 +4499,8 @@ Sound familiar?
 </h2>
 <p style={{fontSize:18,color:textMuted,fontWeight:500}}>You're not alone. T
 </div>
-<div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(280p
 {[
+<div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(280p
 {emoji:" {emoji:" {emoji:" {emoji:" {emoji:" {emoji:" ",pain:"\"I've watched 40 hours of videos and still can't build
 ",pain:"\"I quit every course by week 3. The theory is so borin
 ",pain:"\"I don't understand the English terms and keep Googlin
@@ -4832,6 +4831,6 @@ if(track.id==="backend") return <><BackendLesson1 onBack={goBack}/><Popups/></>;
 if(track.id==="data") return <><DataLesson1 onBack={goBack}/><Popups/></>;
 if(track.id==="devops") return <><DevOpsLesson1 onBack={goBack}/><Popups/></>;
 if(track.id==="web3") return <><Web3Lesson1 onBack={goBack}/><Popups/></>;
-            }
+}
 return null;
 }
