@@ -153,7 +153,7 @@ if (!topic.trim()) return;
 setPlanLoading(true); setLearningPlan(null);
 try {
 const system = "You are a helpful learning coach. Create structured, encouraging learni
-const user = `Create a 4-week learning plan for someone who wants to learn: "${topic}"\
+const user = "Create a 4-week learning plan for someone who wants to learn: \"" + topic
 const raw = await callAI(system, user, 0.7, 800);
 const clean = raw.replace(/```json|```/g, "").trim();
 const parsed = JSON.parse(clean);
@@ -4643,7 +4643,6 @@ onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTar
 {/* Colour header band */}
 <div style={{background:`linear-gradient(135deg,${t.color}18,${t.ligh
 <div style={{display:"flex",alignItems:"center",justifyContent:"spa
-<span style={{fontSize:32}}>{t.icon}</span>
 <div style={{background:t.light,color:t.color,fontSize:11,fontWei
 </div>
 {/* BIG title */}
@@ -4810,7 +4809,6 @@ onMouseLeave={e=>{e.currentTarget.style.borderColor=isDone?`${track.color
 <div key={lesson.id} style={{background:trackCard,border:"1px solid #f1f5f9
 <div style={{width:24,height:24,borderRadius:6,background:trackSub,displa
 <div style={{flex:1,fontSize:13,fontWeight:500,color:trackMuted}}>{lesson
-<div style={{fontSize:10,fontWeight:700,color:trackMuted,background:track
 </div>
 ))}
 </div>
